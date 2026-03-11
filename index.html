@@ -20,12 +20,14 @@ body{
 background:#0f172a;
 color:white;
 line-height:1.6;
+scroll-behavior:smooth;
 }
 
 .container{
 width:85%;
 margin:auto;
 }
+
 
 /* NAVBAR */
 
@@ -76,8 +78,7 @@ color:#38bdf8;
 }
 
 .hero-text p{
-width:60%;
-margin-bottom:20px;
+max-width:600px;
 }
 
 .btn{
@@ -90,6 +91,31 @@ border-radius:5px;
 font-weight:bold;
 }
 
+.github-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 18px;
+background:#111827;
+color:#38bdf8;
+text-decoration:none;
+border:1px solid #38bdf8;
+border-radius:5px;
+font-size:14px;
+}
+
+.github-btn:hover{
+background:#38bdf8;
+color:black;
+}
+
+.resume-btn{
+background:#22c55e;
+color:white;
+padding:10px 22px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+}
 /* ABOUT */
 
 .about{
@@ -143,6 +169,13 @@ padding:20px;
 border-radius:8px;
 }
 
+.project:hover,
+.skill:hover,
+.cert-card:hover{
+transform:translateY(-5px);
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
 /* CONTACT */
 
 .contact{
@@ -209,7 +242,9 @@ border-radius:8px;
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#certifications">Certifications</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="resume.pdf" target="_blank">Resume</a></li>
 </ul>
 
 </nav>
@@ -227,15 +262,25 @@ border-radius:8px;
 
 <h1>Hello, I'm <span>Varun Sharma</span></h1>
 
-<p class="typing"></p>
+
 <p>
-Detail-oriented BCA student with strong foundations in Python programming,
-data analysis, and machine learning concepts. Interested in building
-AI-driven solutions and real-world software projects.
+Aspiring Data Scientist and Machine Learning enthusiast with strong foundations in Python, data analysis, and statistical modeling. Passionate about solving real-world problems using data and AI.
 </p>
 
 <a href="#projects" class="btn">View My Projects</a>
+<br><br>
 
+<a href="https://github.com/VarunSharma-007" class="github-btn" target="_blank">
+View My GitHub
+</a>
+
+<a href="https://www.linkedin.com/in/varun-sharma-314621370" class="github-btn" target="_blank">
+LinkedIn
+</a>
+
+<a href="resume.pdf" class="resume-btn" download>
+Download Resume
+</a>
 </div>
 
 <div class="hero-image">
@@ -303,26 +348,32 @@ real-world datasets and building analytical solutions.
 <div class="project">
 <h3>Loan Risk Modeling using Machine Learning</h3>
 <p>
-Built machine learning classification models on loan datasets.
-Performed data cleaning, feature engineering, and evaluated
-models using classification metrics.
+Built classification models using Python, Pandas, Numpy, Seaborn, Scikit-learn, Logistic Regression, Decision Tree, KNN, SVM to predict loan default risk.
 </p>
+<a href="https://github.com/VarunSharma-007/Credit-risk-modelling.git" class="github-btn" target="_blank">
+View on GitHub
+</a>
 </div>
 
 <div class="project">
-<h3>Exploratory Data Analysis on Real-World Datasets</h3>
+<h3>Water Quality Analysis using Machine Learning</h3>
 <p>
-Analyzed datasets to identify trends and relationships
+Machine learning analysis of water quality to determine if water is safe for drinking.
+</p>
+<a href="https://github.com/VarunSharma-007/Water-Quality-Analysis.git" class="github-btn" target="_blank">
+View on GitHub
+</a>
+</div>
+
+<div class="project">
+<h3>Exploratory Data Analysis on Housing Dataset</h3>
+<p>
+Exploratory Data Analysis on housing dataset to understand factors affecting house prices. Analyzed dataset to identify trends and relationships
 using data visualization and preprocessing techniques.
 </p>
-</div>
-
-<div class="project">
-<h3>Python Mini Projects</h3>
-<p>
-Developed multiple Python programs focusing on logic building,
-functions, loops, and exception handling.
-</p>
+<a href="https://github.com/VarunSharma-007/Housing-Data-EDA.git" class="github-btn" target="_blank">
+View on GitHub
+</a>
 </div>
 
 </div>
@@ -339,19 +390,27 @@ functions, loops, and exception handling.
 <div class="cert-grid">
 
 <div class="cert-card">
-<h3>Python for Data Science</h3>
+<h3>Artificial Intelligence with Machine Learning</h3>
 
+<p>Course Completion Certificate</p>
+
+<a href="certificates/Artificial_Intelligence_with_ML(AIML)-Varun_Sharma.pdf"
+class="github-btn" target="_blank">
+View Certificate
+</a>
 </div>
 
 <div class="cert-card">
-<h3>Machine Learning Fundamentals</h3>
+<h3>Credit Risk Modelling (Loan Classification)</h3>
 
+<p>Project Completion Certificate</p>
+
+<a href="certificates/Credit_Risk_Modelling_(_loan_classification_)-Varun_Sharma.pdf"
+class="github-btn" target="_blank">
+View Certificate
+</a>
 </div>
 
-<div class="cert-card">
-<h3>Data Analysis with Python</h3>
-
-</div>
 
 </div>
 
@@ -383,21 +442,6 @@ linkedin.com/in/varun-sharma-314621370
 <footer>
 <p>© 2026 Varun Sharma | Portfolio</p>
 </footer>
-<script>
 
-const text = "Python Developer | Data Science Enthusiast | Machine Learning Learner";
-let index = 0;
-
-function typeEffect() {
-    if (index < text.length) {
-        document.querySelector(".typing").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 60);
-    }
-}
-
-typeEffect();
-
-</script>
 </body>
 </html>
